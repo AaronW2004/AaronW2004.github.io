@@ -1,0 +1,113 @@
+/* Element Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+/* ID Styling */
+#content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.text-content {
+    text-align: justify; /* Aligns the text to both left and right edges */
+    margin: 20px 0; /* Adds space above and below the paragraphs */
+    padding: 15px; /* Adds padding inside the border */
+    border: 2px solid #2980b9; /* Adds a border around the text content */
+    border-radius: 8px; /* Rounds the corners of the border */
+    background-color: rgba(255, 255, 255, 0.9); /* Adds a subtle background color */
+}
+
+.text-content p {
+    margin-bottom: 15px; /* Adds space between paragraphs */
+    line-height: 1.6; /* Improves readability */
+}
+
+
+/* Class Styling */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header h1 {
+    text-align: center;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Images */
+.images {
+    display: flex;
+    justify-content: center; /* Centers the images horizontally */
+    align-items: center; /* Centers the images vertically if the container has a fixed height */
+    gap: 20px; /* Adds space between the images */
+    margin: 20px 0; /* Adds margin to the top and bottom */
+}
+
+.images img {
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height to maintain 1:1 aspect ratio */
+    object-fit: cover; /* Ensures the image fills the area while maintaining the aspect ratio */
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+}
+
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #555;
+    color: white;
+}
+
+td {
+    background-color: #f4f4f4;
+}
