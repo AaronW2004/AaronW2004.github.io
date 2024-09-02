@@ -1,4 +1,3 @@
-/* Updated CSS for the Atlanta Falcons Theme */
 
 body {
     font-family: Arial, sans-serif;
@@ -108,7 +107,6 @@ footer {
     margin-top: 20px;
 }
 
-/* New CSS for Additional Boxes */
 .additional-boxes {
     display: flex;
     flex-direction: column; /* Stack boxes vertically */
