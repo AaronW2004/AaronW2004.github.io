@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,6 +18,7 @@ h1, h2 {
     margin: 0;
 }
 
+/* Main content styles */
 main {
     display: flex;
     flex-wrap: wrap;
@@ -24,7 +26,8 @@ main {
     padding: 20px;
 }
 
-.assignment {
+/* Assignment and Project sections */
+.assignment, .project {
     background-color: #fff; /* White background */
     border: 1px solid #ff0000; /* Red border */
     border-radius: 5px;
@@ -36,20 +39,21 @@ main {
     color: #ff0000; /* Red text */
 }
 
-.assignment img {
+.assignment img, .project img {
     width: 300px;
     height: 150px;
     object-fit: cover;
     border-radius: 5px;
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
     main {
         flex-direction: column;
         align-items: center;
     }
 
-    .assignment {
+    .assignment, .project {
         width: 90%;
     }
 }
