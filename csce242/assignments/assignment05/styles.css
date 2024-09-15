@@ -1,0 +1,45 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #000000;
+	padding: 20px;
+	text-align: center;
+}
+
+header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    margin-bottom: 0;
+    color: rgb(155, 3, 3);
+}
+
+
+header h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: rgb(155, 3, 3);
+}
+
+main {
+	display: flex;
+    height: 720px;
+	flex-wrap: wrap;
+	justify-content: center;
+    background-color: #000000;
+}
+
+.column {
+	flex-basis: 30%;
+	margin: 20px;
+}
+
+.box {
+	background-color: #fff;
+	padding: 20px;
+    height: 300px;
+    align-items: center;
+}
+
