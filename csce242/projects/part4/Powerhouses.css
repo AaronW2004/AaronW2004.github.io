@@ -6,7 +6,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #000000;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 p {
@@ -25,10 +27,11 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #80000A;
 }
 
 .title-box {
-    background-color: #c34a36;
+    background-color: #000000;
     padding: 20px;
     text-align: center;
     color: white;
@@ -46,21 +49,27 @@ p {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+    background-color: #000000;
 }
 
 .image-placeholder {
-    width: 878px;
-    height: 500px;
+    width: 89.5%;
+    height: 95%;
     background-color: #ccc;
     margin: 40px;
     margin-bottom: 40px;
     transform: translateY(-25px);
 }
 
+.image-placeholder img {
+    width: 100%;
+    height: 260px;
+}
+
 .button-row button {
     width: 48%;
     padding: 15px;
-    background-color: #c34a36;
+    background-color: #A71930;
     color: white;
     border: none;
     cursor: pointer;
@@ -76,16 +85,23 @@ p {
 
 .right-column {
     width: 50%;
+    height: 95%;
     padding: 20px;
-    background-color: #eaeaea;
+    background-color: #13274F;
 }
 
 .box {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 10px;
+    display: flex;
     margin-bottom: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+}
+
+.box p {
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .image-box {
@@ -113,11 +129,60 @@ p {
 
 .image-placeholder2 {
     width: 100%;
-    height: 300px;
+    height: 35%;
     background-color: #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.image-placeholder2 img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .left-column, .right-column {
+        width: 50%;
+    }
+}
+
+/* Medium devices (tablets, 992px and up) */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+    .image-placeholder, .image-placeholder2 {
+        height: 150px; /* Reduce image height */
+    }
+}
+
+/* Small devices (landscape phones, 768px and up) */
+@media (max-width: 768px) {
+    .button-row button {
+        font-size: 24px;
+    }
+    .image-placeholder, .image-placeholder2 {
+        height: 120px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .title-box {
+        font-size: 24px; /* Reduce title font size */
+        padding: 20px;
+    }
+    .image-placeholder, .image-placeholder2 {
+        height: 100px; /* Adjust image height */
+    }
 }

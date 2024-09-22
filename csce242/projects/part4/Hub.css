@@ -15,9 +15,9 @@ body, html {
     padding: 20px;
 }
 
-.left-column {
+.left-column { 
     width: 60%;
-    background-color: #f4f4f4;
+    background-color: #939393;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,14 +25,14 @@ body, html {
 
 .right-column {
     width: 40%;
-    background-color: #eaeaea;
+    background-color: #000000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .title-box {
-    background-color: #c34a36;
+    background-color: #A71930;
     color: white;
     padding: 20px;
     text-align: center;
@@ -41,33 +41,38 @@ body, html {
 
 .menu-row {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     gap: 50px;
     margin: 20px 0;
+    color: white; 
 }
 
 .menu-item {
+    background-color: #000000;
     font-size: 48px;
+    width: 600px;
     cursor: pointer;
-    margin-right: 100px;
-    margin-left: 80px;
-    border: 2px solid #c34a36;
-    flex: 1;
+    margin-right: 0 40px;
+    margin-left: 0 40px;
+    border: 2px solid #A71930;
+    display: flex;
     text-align: center;
+    justify-content: center;
 }
 
 
 .paragraph-row {
-    border: 2px solid #c34a36;
+    border: 2px solid #A71930;
     flex: 1;
     font-size: 24px;
-    background-color: #c34a36;
+    background-color: #A71930;
     color: white;
 }
 
-.image-placeholder {
-    width: 100%;
-    height: 400px;
+.split-image {
+    width: 47%;
+    height: 200px;
     background-color: #ccc;
     display: flex;
     align-items: center;
@@ -75,6 +80,17 @@ body, html {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.split-image img {
+    width:  100%; /* Ensures the image fits within the div */
+    height: 200px; /* Maintains the aspect ratio */
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between; 
+}
+
 
 .dropdown-1, .dropdown-2 {
     background-color: white;
@@ -93,4 +109,72 @@ body, html {
 .dropdown-1 {
     margin: 100px;
     margin-top: 140px;
+}
+
+.contact-us {
+    background-color: #A71930; /* Matching the theme colors */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #A71930; /* Optional border */
+    font-size: 18px;
+    margin-top: auto; /* Ensures it's at the bottom */
+}
+.contact-us a {
+    color: white;
+    text-decoration: none;
+}
+.contact-us a:hover {
+    text-decoration: underline;
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .left-column, .right-column {
+        width: 50%; /* Adjust width of columns */
+    }
+}
+
+/* Medium devices (tablets, 992px and up) */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column; /* Stack columns vertically */
+    }
+    .left-column, .right-column {
+        width: 100%; /* Full width for both columns */
+    }
+    .split-image {
+        height: 150px; /* Reduce image height */
+    }
+}
+
+/* Small devices (landscape phones, 768px and up) */
+@media (max-width: 768px) {
+    .menu-item {
+        font-size: 36px; /* Reduce font size */
+        width: auto; /* Allow items to fit better */
+    }
+    .split-image {
+        height: 120px; /* Further reduce image height */
+    }
+    .dropdown-1, .dropdown-2 {
+        font-size: 16px; /* Reduce dropdown text size */
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .menu-row {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+    .paragraph-row p {
+        font-size: 18px; /* Reduce paragraph font size */
+    }
+    .split-image img {
+        height: 100px; /* Adjust image size for small screens */
+    }
+    .dropdown-1, .dropdown-2 {
+        margin: 20px; /* Adjust margins */
+        font-size: 14px; /* Further reduce dropdown text size */
+    }
 }
