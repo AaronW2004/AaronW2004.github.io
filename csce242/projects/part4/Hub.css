@@ -11,12 +11,20 @@ body, html {
     height: 100vh;
 }
 
-.center-column, .right-column {
+.left-column, .center-column, .right-column {
     padding: 20px;
 }
 
+.left-column {
+    width: 15%;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .center-column { 
-    width: 60%;
+    width: 55%;
     background-color: #939393;
     display: flex;
     flex-direction: column;
@@ -24,8 +32,8 @@ body, html {
 }
 
 .right-column {
+    width: 25%; /* Reduced width */
     margin-left: auto;
-    width: 30%;
     background-color: #000000;
     display: flex;
     flex-direction: column;
@@ -41,28 +49,56 @@ body, html {
     height: 120px;
 }
 
-.menu-row {
+.hamburger-menu {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 50px;
-    margin: 20px 0;
-    color: white; 
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #A71930;
+    padding: 10px;
 }
 
-.menu-item {
-    background-color: #000000;
+.menu-icon {
     font-size: 48px;
-    width: 600px;
     cursor: pointer;
-    margin-right: 0 40px;
-    margin-left: 0 40px;
-    border: 2px solid #A71930;
-    display: flex;
+    color: white;
+    padding: 10px;
     text-align: center;
-    justify-content: center;
+    border: 2px solid #A71930; /* Added border for better visibility */
 }
 
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    display: block; /* Menu is always open by default */
+    background-color: #A71930;
+    border: 2px solid #A71930;
+    width: 100%;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px;
+    border: 2px solid white; /* Added border around each menu item */
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 48px;
+    display: block;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
 
 .paragraph-row {
     border: 2px solid #A71930;
@@ -84,99 +120,90 @@ body, html {
 }
 
 .split-image img {
-    width:  100%; /* Ensures the image fits within the div */
-    height: 200px; /* Maintains the aspect ratio */
+    width: 100%;
+    height: 200px;
 }
 
 .image-row {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
-
-.dropdown-1, .dropdown-2 {
+.dropdown-1 {
     background-color: white;
     border: 2px solid #c34a36;
     padding: 15px;
     text-align: center;
     font-size: 20px;
     cursor: pointer;
-}
-
-.dropdown-2 {
-    margin: 100px;
-    margin-bottom: 350px;
-}
-
-.dropdown-1 {
     margin: 100px;
     margin-top: 140px;
 }
 
 .contact-us {
-    background-color: #A71930; /* Matching the theme colors */
+    background-color: #A71930;
     color: white;
     padding: 20px;
     text-align: center;
-    border: 2px solid #A71930; /* Optional border */
+    border: 2px solid #A71930;
     font-size: 18px;
-    margin-top: auto; /* Ensures it's at the bottom */
+    margin-top: auto;
 }
+
 .contact-us a {
     color: white;
     text-decoration: none;
 }
+
 .contact-us a:hover {
     text-decoration: underline;
 }
 
-/* Large devices (desktops, 1200px and up) */
-@media (max-width: 1200px) {
-    .left-column, .right-column {
-        width: 50%; /* Adjust width of columns */
-    }
-}
+/* Media Queries */
 
 /* Medium devices (tablets, 992px and up) */
 @media (max-width: 992px) {
     .container {
-        flex-direction: column; /* Stack columns vertically */
-    }
-    .left-column, .right-column {
-        width: 100%; /* Full width for both columns */
+        flex-direction: column;
     }
     .split-image {
-        height: 150px; /* Reduce image height */
+        height: 150px;
     }
 }
 
 /* Small devices (landscape phones, 768px and up) */
 @media (max-width: 768px) {
-    .menu-item {
-        font-size: 36px; /* Reduce font size */
-        width: auto; /* Allow items to fit better */
+    .center-column {
+        width: 100%;
     }
-    .split-image {
-        height: 120px; /* Further reduce image height */
+    .left-column {
+        width: 100%;
     }
-    .dropdown-1, .dropdown-2 {
-        font-size: 16px; /* Reduce dropdown text size */
+    .right-column {
+        width: 100%;
+    }
+    .menu {
+        display: none; /* Menu is hidden on smaller screens */
+    }
+    .menu-icon {
+        display: block; /* Menu icon is shown */
+        border: 2px solid white; /* More visible on smaller screens */
+    }
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: block; /* Menu is toggled when clicked */
     }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) {
-    .menu-row {
-        flex-direction: column; /* Stack menu items vertically */
-    }
     .paragraph-row p {
-        font-size: 18px; /* Reduce paragraph font size */
+        font-size: 18px;
     }
     .split-image img {
-        height: 100px; /* Adjust image size for small screens */
+        height: 100px;
     }
-    .dropdown-1, .dropdown-2 {
-        margin: 20px; /* Adjust margins */
-        font-size: 14px; /* Further reduce dropdown text size */
+    .dropdown-1 {
+        margin: 20px;
+        font-size: 14px;
     }
 }
