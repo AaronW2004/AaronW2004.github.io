@@ -10,7 +10,6 @@ class Bird {
         this.image = image;
     }
 
-    // Returns a section for the bird with its name and image
     getSection() {
         return `
             <div class="bird-box" onclick="showModal('${this.name}')">
@@ -20,7 +19,6 @@ class Bird {
         `;
     }
 
-    // Returns the expanded section with all the details for the modal dialog
     getExpandedSection() {
         return `
             <div id="${this.name}-modal" class="w3-modal">
@@ -47,19 +45,16 @@ const birds = [
     new Bird("Robin", "10 inches", "2 years", "Worms and berries", "Gardens", "Robins are a sign of spring", "robin.jpg")
 ];
 
-// Loop through each bird and add to the DOM
 const birdContainer = document.getElementById('bird-container');
 birds.forEach(bird => {
     birdContainer.innerHTML += bird.getSection();
     birdContainer.innerHTML += bird.getExpandedSection(); // Adds the modal for each bird
 });
 
-// Show modal when a bird is clicked
 function showModal(birdName) {
     document.getElementById(`${birdName}-modal`).style.display = 'block';
 }
 
-// Close modal
 function closeModal(birdName) {
     document.getElementById(`${birdName}-modal`).style.display = 'none';
 }
