@@ -206,6 +206,48 @@ body, html {
     color: #777777;
 }
 
+.contact-us {
+    background-color: #A71930;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #A71930;
+    font-size: 18px;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.contact-us input, .contact-us textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.contact-us button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-us button:hover {
+    background-color: #555;
+}
+
+#formMessage {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+
 /* Media Queries */
 @media (max-width: 992px) {
     .container {
