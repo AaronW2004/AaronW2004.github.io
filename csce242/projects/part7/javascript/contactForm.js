@@ -1,33 +1,36 @@
-// contactForm.js
+const showEmailResult = async (e) => {
+  e.preventDefault();
+  const result = document.getElementById("formMessage");
+  let response = await getEmailResult();
+  if (response.status == 200) {
+    result.innerHTML = "Email sent successfully!";
+  } else {
+    result.innerHTML = "Failed to send email. Please try again later.";
+  }
+};
 
-document.addEventListener('DOMContentLoaded', function () {
-  const contactForm = document.getElementById('contactForm');
-  const formMessage = document.getElementById('formMessage');
+const getEmailResult = async (e) => {
+  const form = document.getElementById("contactForm");
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  const result = document.getElementById("formMessage");
+  result.innerHTML = "please wait...";
 
-  contactForm.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    formMessage.textContent = '';
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json,
+    });
+    return response; 
+  } catch (error) {
+    console.log(error);
+    result.innerHTML = "Sorry, your email couldn't be sent.";
+  }
+};
 
-    const formData = new FormData(contactForm);
-    formData.append("access_key", "766e15ab-403a-4cae-a18d-c044032d3108");
-
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-      });
-
-      if (response.ok) {
-        formMessage.textContent = 'Message sent successfully!';
-        formMessage.style.color = 'green';
-        contactForm.reset();
-      } else {
-        formMessage.textContent = 'Failed to send message. Please try again.';
-        formMessage.style.color = 'red';
-      }
-    } catch (error) {
-      formMessage.textContent = 'An error occurred. Please try again later.';
-      formMessage.style.color = 'red';
-    }
-  });
-});
+document.getElementById("contactForm").onsubmit = showEmailResult;

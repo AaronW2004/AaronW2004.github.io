@@ -29,17 +29,25 @@
         <div class="center-column">
             <div class="paragraph-row">
                 <p>
-                    Welcome to the Atlanta Sports Hub, where we celebrate the heart and soul of Georgia's sports culture. From the grit and determination of the Falcons on the gridiron to the precision of the Braves on the diamond, Atlanta’s teams have brought pride and passion to fans for generations. Our mission is to provide fans with all the latest updates, game-day news, and behind-the-scenes insights into Atlanta’s beloved sports teams. Whether you’re cheering from the stands or watching from home, the Atlanta Sports Hub keeps you connected to the teams and the community that define our city.
+                    Welcome to the Atlanta Sports Hub, where we celebrate the heart and soul of Georgia's sports culture.
+                    From the grit and determination of the Falcons on the gridiron to the precision of the Braves on the diamond,
+                    Atlanta’s teams have brought pride and passion to fans for generations. Our mission is to provide fans with 
+                    all the latest updates, game-day news, and behind-the-scenes insights into Atlanta’s beloved sports teams. 
+                    Whether you’re cheering from the stands or watching from home, the Atlanta Sports Hub keeps you connected 
+                    to the teams and the community that define our city.
                 </p>
-                
+            </div>
+
+            <div class="video-section">
+                <iframe width=100% height=100% src="https://www.youtube.com/embed/Q9Mg4afregA?si=RR_c6phmcBW1fIZB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
             <div class="image-row">
                 <div class="split-image">
-                    <img src="images/hub2.jpg">
+                    <img src="images/hub2.jpg" alt="Hub Image 2">
                 </div>
                 <div class="split-image">
-                    <img src="images/hub1.jpg">
+                    <img src="images/hub1.jpg" alt="Hub Image 1">
                 </div>
             </div>
         </div>
@@ -48,7 +56,9 @@
             <div class="contact-us">
                 <h3>Contact Us</h3>
                 <p>Phone: +1(803)-470-9448</p>
-                    <form id="contactForm">
+
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="766e15ab-403a-4cae-a18d-c044032d3108">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Your Message" required></textarea>
@@ -56,7 +66,7 @@
                     <p id="formMessage"></p>
                 </form>
             </div>
-        
+
             <div class="dropdown-1">
                 <div class="dropdown-placeholder">Purchase Tickets</div>
             </div>
@@ -97,7 +107,6 @@
             </div>
         </div>
     </div>
-<script src="contactForm.js" defer></script>
+   <script src="javascript/contactForm.js"></script> 
 </body>
-
 </html>
