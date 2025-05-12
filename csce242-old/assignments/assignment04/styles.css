@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+/* Top-right navigation styling */
+.top-right-nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    text-align: right;
+    font-size: 0.8em;
+}
+
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.top-nav ul li {
+    display: inline;
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.gateways-label {
+    font-weight: bold;
+    color: white;
+    padding-right: 10px;
+}
+
+/* Logo and main navigation styles */
+header .logo {
+    margin-top: 50px;
+}
+
+header .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.main-nav-section {
+    width: 100%;
+    background-color: #444;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.main-nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-background {
+    background-image: url('usclogo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 5em;
+    margin-bottom: 0px;
+}
+
+.hero-content .hero-here-box {
+    background-color: #73000a;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-buttons .btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-buttons .btn:hover {
+    background-color: #f0f0f0;
+}
+
+/*News and Events */
+.news-events-section {
+    background-color: black;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+.news-events-section h2 {
+    margin-bottom: 30px;
+}
+
+.news-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.news-list li {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+}
+
+.news-list img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.news-text a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.news-text a:hover {
+    text-decoration: underline;
+}
+
+/* New Section with Two Boxes in Three Columns */
+.next-gen-education-section {
+    background-image: url('usclogo2.jpg');
+    padding: 60px 0;
+    height: 700px;
+}
+
+.three-column-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.column {
+    width: 30%; 
+}
+
+.middle-column {
+    width: 10%; 
+}
+
+/* Box styles */
+.left-box, .right-box {
+    padding: 20px; 
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to top */
+    height: 350px; /* Reduced height to make the boxes smaller */
+}
+
+.left-box {
+    background-color: black;
+    color: white;
+    margin-top: 200px; /* Move the left box down the screen */
+}
+
+.right-box {
+    background-color: #73000a; /* Garnet Red */
+    color: white;
+}
+
+/* Header and paragraph styles */
+.left-box h2, .right-box h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.left-box p, .right-box p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.red-btn {
+    background-color: #73000a;
+    color: white;
+}
+
+.red-btn:hover {
+    background-color: #900012;
+}
+
+.black-btn {
+    background-color: black;
+    color: white;
+}
+
+.black-btn:hover {
+    background-color: #333;
+}
+
+/* Footer styles */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

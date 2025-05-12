@@ -1,0 +1,211 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    overflow-y: hidden;
+    
+}
+
+p {
+    height: 200px;
+    width: 100%;
+    font-size: 22px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Left Column */
+.left-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-box {
+    background-color: #A71930;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    margin: 40px;
+    font-size: 36px;
+}
+
+.image-row img {
+    width: 100%;
+    flex: 1;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.image-placeholder {
+    width: 687px;
+    height: 500px;
+    background-color: #ccc;
+    margin: 40px;
+    margin-bottom: 40px;
+    transform: translateY(-25px);
+}
+
+.image-placeholder2 {
+    width: 878px;
+    height: 300px;
+    background-color: #ccc;
+    display: flex;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+.button-row button {
+    width: 48%;
+    padding: 15px;
+    background-color: #A71930;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 100px;
+    margin-right: 41px;
+    margin-left: 40px;
+    font-size: 28px;
+}
+
+.button-row button:hover {
+    background-color: #0056b3;
+}
+
+/* Right Column */
+.right-column {
+    width: 50%;
+    padding: 20px;
+    background-color: #A71930;
+}
+
+.box {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+}
+
+.box p {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.box h2 {
+    border-radius: 5px;
+    border-right-color: red;
+}
+
+.image-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title-paragraph-section h2 {
+    font-size: 24px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.title-paragraph-section p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.image-placeholder2 {
+    width: 100%;
+    height: 250px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .left-column, .right-column {
+        width: 50%;
+    }
+}
+
+/* Medium devices (tablets, 992px and up) */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column; /* Stack the columns vertically */
+    }
+    .left-column, .right-column {
+        width: 100%;
+        padding: 10px; /* Adjust padding */
+    }
+    .image-placeholder, .image-placeholder2 {
+        height: 200px; /* Adjust image heights for medium screens */
+    }
+    .button-row button {
+        width: 100%; /* Buttons take up full width */
+        margin: 10px 0; /* Adjust button spacing */
+    }
+}
+
+/* Small devices (landscape phones, 768px and up) */
+@media (max-width: 768px) {
+    .title-box {
+        font-size: 28px;
+        margin: 20px; /* Adjust margins */
+    }
+    .image-placeholder, .image-placeholder2 {
+        height: 150px; /* Reduce image heights for small screens */
+    }
+    .box p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+    .button-row button {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .title-box {
+        font-size: 24px; /* Reduce title size */
+        margin: 10px;
+    }
+    .image-placeholder, .image-placeholder2 {
+        height: 100px; /* Adjust image heights for extra small screens */
+    }
+    .box p {
+        font-size: 12px; /* Further reduce paragraph text size */
+    }
+    .button-row button {
+        font-size: 18px;
+        width: 100%; /* Buttons take full width */
+    }
+}

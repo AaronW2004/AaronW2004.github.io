@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Hub.css">
+    <title>Atlanta Sports Hub</title>
+</head>
+<body>
+    <div class="title-box">
+        <h1>Atlanta Sports Hub</h1>
+    </div>
+    <div class="container">
+        <div class="left-column">
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="TheHistory.html">The History</a></li>
+                        <li><a href="BOPrey.html">Meet the Teams</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="GameSchedule.html">This Week's Fight!</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="center-column">
+            <div class="paragraph-row">
+                <p>
+                    Welcome to the Atlanta Sports Hub, where we celebrate the heart and soul of Georgia's sports culture.
+                    From the grit and determination of the Falcons on the gridiron to the precision of the Braves on the diamond,
+                    Atlanta’s teams have brought pride and passion to fans for generations. Our mission is to provide fans with 
+                    all the latest updates, game-day news, and behind-the-scenes insights into Atlanta’s beloved sports teams. 
+                    Whether you’re cheering from the stands or watching from home, the Atlanta Sports Hub keeps you connected 
+                    to the teams and the community that define our city.
+                </p>
+            </div>
+
+            <div class="video-section">
+                <iframe width=100% height=100% src="https://www.youtube.com/embed/Q9Mg4afregA?si=RR_c6phmcBW1fIZB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="image-row">
+                <div class="split-image">
+                    <img src="images/hub2.jpg" alt="Hub Image 2">
+                </div>
+                <div class="split-image">
+                    <img src="images/hub1.jpg" alt="Hub Image 1">
+                </div>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+                <p>Phone: +1(803)-470-9448</p>
+
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="766e15ab-403a-4cae-a18d-c044032d3108">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                    <p id="formMessage"></p>
+                </form>
+            </div>
+
+            <div class="dropdown-1">
+                <div class="dropdown-placeholder">Purchase Tickets</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Updates Section at the Bottom -->
+    <div class="recent-updates-section">
+        <h2>Recent Updates</h2>
+        <div class="news-section">
+            <div class="news-card">
+                <img src="images/news1.jpg" alt="News 1">
+                <div class="news-info">
+                    <h3>Big Kirko The Correct Signing for the Falcons?</h3>
+                    <p>Aaron Williams</p>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="images/news2.jpg" alt="News 2">
+                <div class="news-info">
+                    <h3>Disappointment for Braves Fans Around the Country</h3>
+                    <p>Aaron Williams</p>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="images/news3.jpg" alt="News 3">
+                <div class="news-info">
+                    <h3>Late Game Winner Brings Joy to the City of Atlanta</h3>
+                    <p>Aaron Williams</p>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="images/news4.jpg" alt="News 4">
+                <div class="news-info">
+                    <h3>Pre-Season Expectations vs. Reality</h3>
+                    <p>Aaron Williams</p>
+                </div>
+            </div>
+        </div>
+    </div>
+   <script src="javascript/contactForm.js"></script> 
+</body>
+</html>

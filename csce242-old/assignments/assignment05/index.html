@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Assignment 5</h1>
+        <h2>Introduction to Javascript</h2>
+    </header>
+    <main class="background">
+        <div class="column" id="column1">
+            <div class="box">
+                <h3>Count</h3>
+                <p id="number" style="text-align: center;">0</p>
+            </div>
+        </div>
+        <div class="column" id="column2">
+            <div class="box">
+                <img id="image" src="randomimage.jpg" style="display: block; margin: auto; cursor: pointer;">
+            </div>
+        </div>
+        <div class="column" id="column3">
+            <div class="box">
+                <h3>Slider Move</h3>
+                <div id="slider-box">
+                    <div id="slider-track">
+                        <input type="range" id="slider" min="0" max="100" value="0">
+                        <div id="slider-thumb"></div>
+                    </div>
+                    <div id="square"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

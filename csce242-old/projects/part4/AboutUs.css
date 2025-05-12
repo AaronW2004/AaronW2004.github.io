@@ -1,0 +1,201 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fa141400
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #A71930;
+}
+
+/* Container */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Left Column */
+.left-column {
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.image-placeholder {
+    background-color: #ccc;
+    width: 100%;
+    height: 290px;
+    margin-bottom: 20px;
+}
+
+.box1 {
+    background-color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.box2 {
+    background-color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 280px;
+    margin-bottom: 20px;
+}
+
+.paragraph-box {
+    background-color: #fff;
+    padding: 20px;
+    height: 300px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.paragraph-box2 {
+    background-color: #fff;
+    padding: 20px;
+    font-weight: bold;
+    height: 295px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+/* Center Column */
+.center-column {
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.center-column .box {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.center-column .paragraph-box {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+/* Right Column */
+.right-column {
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.bordered-paragraph {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.meet-the-team-box {
+    background-color: #e0e0e0;
+    padding: 20px;
+    height: 300px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-placeholder3 {
+    background-color: #ccc;
+    width: 100%;
+    height: 290px;
+    margin-bottom: 20px;
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .left-column, .center-column, .right-column {
+        width: 33.3%;
+    }
+}
+
+/* Medium devices (tablets, 992px and up) */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        height: auto; /* Adjust container height for stacked columns */
+    }
+    .left-column, .center-column, .right-column {
+        width: 100%;
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    .image-placeholder {
+        height: 200px; /* Adjust image height */
+    }
+    .box1, .box2, .paragraph-box, .paragraph-box2, .bordered-paragraph {
+        height: auto; /* Let boxes adjust to their content */
+        padding: 15px;
+    }
+}
+
+/* Small devices (landscape phones, 768px and up) */
+@media (max-width: 768px) {
+    .box1, .box2 {
+        font-size: 20px;
+    }
+    .image-placeholder {
+        height: 150px;
+    }
+    .paragraph-box, .paragraph-box2 {
+        font-size: 14px;
+    }
+    .meet-the-team-box {
+        height: auto;
+        font-size: 16px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .box1, .box2 {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .image-placeholder {
+        height: 120px;
+    }
+    .paragraph-box, .paragraph-box2, .bordered-paragraph {
+        font-size: 12px;
+        padding: 10px;
+    }
+    .meet-the-team-box {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
