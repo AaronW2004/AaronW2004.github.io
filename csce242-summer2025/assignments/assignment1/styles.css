@@ -2,10 +2,11 @@ h1 {
     color: red;
 }
 
+/* Tables */
 table {
     border-collapse: collapse;
 }
 
-td, tr {
+td, th {
     border: 1px dotted red;
 }
