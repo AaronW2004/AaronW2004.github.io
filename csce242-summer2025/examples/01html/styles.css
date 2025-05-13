@@ -1,0 +1,22 @@
+/* Structure */
+body {
+    background: skyblue;
+}
+
+/* Fonts */
+h1 {
+    color: green;
+}
+
+/* Tables */
+td, th {
+    border: 1px dotted red;
+}
+
+th {
+    background: maroon;
+}
+
+table {
+    border-collapse: collapse;
+}
