@@ -1,0 +1,55 @@
+body {
+    background: darkred;
+}
+
+#content {
+    margin-top: 50px;
+    width: 80%;
+    margin:auto;
+    color: white;
+}
+
+header, main, footer {
+    background-color: red;
+    background: lightcoral;
+    border: 1px solid #abc;
+    padding: 5px;
+    text-align: center;
+}
+
+header {
+    padding: 50px;
+}
+
+#main-nav li {
+    display: inline-block;
+}
+
+#main-nav a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#main-nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+.giraffe-pic {
+    background-color: green;
+    text-align: center;
+    width: 50%;
+    padding: 20px 5px 10px;
+    border-radius: 5px;
+    margin: 10px auto 20px;
+    color: white;
+    box-shadow: 5px 5px gray;
+}
+
+.g-raffe {
+    width: 60%;
+    height: auto;
+}
