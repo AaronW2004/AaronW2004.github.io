@@ -8,6 +8,12 @@ body {
    
 }
 
+#subheader {
+    position: relative;
+    right: 10px;
+    top: 10px;
+}
+
 header, footer, .main-area {
     padding:5px;
     margin:10px 0px;
