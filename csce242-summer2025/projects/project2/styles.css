@@ -1,10 +1,11 @@
+/* Global Styles */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #f5f5f5;
 }
 
-/* Header Nav Styling */
+/* Top Navigation Bar */
 header {
     background-color: #73000A;
 }
@@ -41,132 +42,132 @@ header {
     height: 50px;
 }
 
-#main-img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 0 0 5px 5px;
-    display: block;
-    margin: 0 auto;
+/* Secondary Navigation */
+.nav2 {
+    background-color: black;
 }
 
-/* Hero Image */
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
+#nav-bar2 {
+    margin: 0 0 0 250px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0.5rem 0.5rem;
 }
 
-/* News Section */
-.news {
-    padding: 2rem;
-    background-color: #f5f5f5;
+#nav-bar2 li {
+    margin: 20px;
 }
 
-.news h2 {
-    margin-bottom: 1rem;
-}
-
-.news article {
-    margin-bottom: 1.5rem;
-}
-
-.news article h3 {
-    margin-bottom: 0.5rem;
-}
-
-.news article p {
-    margin-bottom: 0.5rem;
-}
-
-.news article a {
-    color: #73000A;
-    text-decoration: none;
-}
-
-/* Schedule Section */
-.schedule {
-    padding: 2rem;
-}
-
-.schedule h2 {
-    margin-bottom: 1rem;
-}
-
-.schedule ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.schedule li {
-    margin-bottom: 0.5rem;
-}
-
-/* Roster Section */
-.roster {
-    padding: 2rem;
-    background-color: #f5f5f5;
-}
-
-.roster h2 {
-    margin-bottom: 1rem;
-}
-
-.roster ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.roster li {
-    margin-bottom: 0.5rem;
-}
-
-/* Coaching Staff Section */
-.coaches {
-    padding: 2rem;
-}
-
-.coaches h2 {
-    margin-bottom: 1rem;
-}
-
-.coaches ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.coaches li {
-    margin-bottom: 0.5rem;
-}
-
-/* Social Media Links */
-.social-media {
-    padding: 2rem;
-    background-color: #f5f5f5;
-    text-align: center;
-}
-
-.social-media h2 {
-    margin-bottom: 1rem;
-}
-
-.social-media a {
-    margin: 0 1rem;
-    color: #73000A;
+#nav-bar2 a {
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-/* Footer */
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+#nav-bar2 a:hover {
+    background-color: #9c0012;
+}
+
+/* Hero Section with Overlay */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.news-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.news-header {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.news-header p {
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.news-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 0 1.5rem 0;
+    max-width: 60%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 
-/* Question Float Styling */
+.news-articles {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end; 
+}
+
+.news-articles article {
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 300px;
+    color: white;
+    transition: transform 0.3s ease;
+    flex: 1;
+    min-width: 250px;
+}
+
+.news-articles article:hover {
+    transform: translateY(-5px);
+}
+
+.news-articles article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-articles article h3 {
+    padding: 0 1rem 1rem;
+    font-size: 1rem;
+}
+
+.news-articles article p {
+    padding: 0.5rem 1rem 0;
+    font-size: 0.8rem;
+    color: white;
+}
+
+/* Floating Question Button */
 .question-float {
     position: fixed;
     bottom: 20px;
@@ -197,3 +198,133 @@ footer {
 .question-float span {
     margin-left: 5px;
 }
+
+/* Schedule */
+.schedule {
+  padding: 2rem;
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* This pushes content to the left */
+}
+
+
+.schedule h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.schedule-card {
+  width: 40%;
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.schedule-date {
+  background: #73000A;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+  width: 80px;
+  border-radius: 6px;
+}
+
+.schedule-info {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.schedule-info span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.schedule-score {
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Headline Styles */
+.headlines {
+  padding: 3rem 2rem;
+  background-color: white;
+  text-align: center;
+}
+
+.headlines-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.headlines-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.headlines-header a {
+  color: #73000A;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.headline-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.headline-grid article {
+  max-width: 250px;
+  text-align: left;
+}
+
+.headline-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: #999;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.headline-grid h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/*Load More Button */
+
+.load-more {
+  margin-top: 2rem;
+}
+
+.load-more button {
+  background-color: #F5F5F5;
+  color: #73000A;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer-strip {
+  background-color: #73000A;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
