@@ -1,0 +1,117 @@
+/* Reset & Layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background-color: white;
+  z-index: 2;
+  position: relative;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+/* Nav */
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 20px 0 20px;
+  margin: 0 0 0 0;
+  list-style: none;
+  background-color: #ccc;
+  border: 1px solid black
+}
+
+.nav-links li {
+  background-color: #ccc;
+  padding: 20px 20px 20px ;
+  border: 1px solid black;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Background section */
+.background {
+  flex: 1;
+  background-image: url("images/spelmanbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content box */
+.center-box {
+  background-color: #ccc;
+  padding: 20px;
+  border: 1px solid black;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  background-color: #ccc;
+  padding: 15px 25px;
+  border: 1px solid black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  padding: 15px 0;
+  background-color: #ccc;
+  border-top: 1px solid black;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  button {
+    width: 80%;
+    max-width: 300px;
+  }
+}

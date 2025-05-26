@@ -1,0 +1,210 @@
+/* Reset and layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Header */
+header {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+/* Nav */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.nav-links li {
+  background-color: #ccc;
+  padding: 10px 20px;
+  border: 1px solid black;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-links a.active {
+  background-color: white;
+  border-bottom: 3px solid black;
+}
+
+/* Main background image */
+main {
+  flex: 1;
+  background-image: url("images/spelmanbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+}
+
+/* Title and event date */
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.page-title-box h2 {
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid black;
+  display: inline-block;
+  font-size: 1.7rem;
+}
+
+.event-date-box {
+  background-color: #ccc;
+  padding: 8px 16px;
+  border: 1px solid black;
+  font-size: 1rem;
+}
+
+/* Content layout */
+.content-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Left column */
+.left-side {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-image-box {
+  background-color: #ccc;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.main-image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main-caption {
+  background-color: white;
+  padding: 10px;
+  font-weight: bold;
+  border: 1px solid black;
+  margin: 10px auto 0;
+  width: fit-content;
+}
+
+.event-info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.info-box,
+.schedule-box {
+  background-color: #ccc;
+  padding: 10px 15px;
+  border: 1px solid black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Right column */
+.right-side {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.details-box {
+  background-color: #ccc;
+  padding: 20px;
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.small-image-box {
+  background-color: #ccc;
+  padding-bottom: 10px;
+}
+
+.small-image-box img {
+  width: 100%;
+  height: auto;
+}
+
+.small-caption {
+  background-color: white;
+  padding: 8px;
+  font-size: 0.95rem;
+  border: 1px solid black;
+  margin: 10px auto 0;
+  width: fit-content;
+}
+
+/* Footer */
+footer {
+  background-color: #ccc;
+  padding: 15px;
+  border-top: 1px solid black;
+  margin-top: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .content-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+  }
+
+  .event-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-caption,
+  .small-caption {
+    width: 90%;
+    margin: 10px auto 0;
+  }
+}

@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: white;
+  text-align: center;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.nav-links li {
+  background-color: #ccc;
+  padding: 10px 20px;
+  border: 1px solid black;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  background-image: url("../images/spelmanbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+}
+
+/* Title */
+.title-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+
+.page-title-box h2 {
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid black;
+  font-size: 1.7rem;
+}
+
+/* Table */
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+table {
+  width: 80%;
+  max-width: 900px;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  background-color: white;
+  border: 2px solid black;
+}
+
+th, td {
+  padding: 15px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+th {
+  background-color: #ccc;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #ccc;
+  padding: 15px;
+  border-top: 1px solid black;
+  margin-top: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .title-row {
+    justify-content: center;
+  }
+}
