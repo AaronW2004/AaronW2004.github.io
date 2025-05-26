@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 6</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Assignment 6</h1>
+  <h2>If Statements</h2>
+
+  <nav>
+    <div class="toggle-arrow" onclick="toggleMenu()">&#9660;</div>
+    <div class="menu-items" id="menu">
+      <a onclick="showSection('speeding')">Exercise 1</a>
+      <a onclick="showSection('css-art')">Exercise 2</a>
+    </div>
+  </nav>
+
+  <!-- Exercise 1 -->
+  <div id="speeding" class="section">
+    <h3>Let's Speed</h3>
+    <input type="range" min="1" max="10" value="5" id="speedSlider">
+    <br>
+    <button onclick="goBike()">Go</button>
+    <button onclick="stopBike()">Stop</button>
+    <div id="bikeContainer">
+      <img src="images/bicycle.png" alt="bike" class="bike" id="bike">
+    </div>
+  </div>
+
+  <!-- Exercise 2 -->
+  <div id="css-art" class="section" style="display: none;">
+    <h3>CSS Art</h3>
+    <button onclick="showArt('moon')">Moon</button>
+    <button onclick="showArt('star')">Star</button>
+    <button onclick="showArt('cloud')">Cloud</button>
+    <div class="art" id="art"></div>
+  </div>
+
+  <footer>
+    <p>&copy;aaronnw</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

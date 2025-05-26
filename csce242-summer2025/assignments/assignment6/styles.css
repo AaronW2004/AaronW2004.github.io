@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  text-align: center;
+}
+
+h1 {
+  color: darkgreen;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: lightcoral;
+  margin: 0;
+}
+
+nav {
+  position: relative;
+}
+
+.toggle-arrow {
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-items {
+  display: none;
+  margin: 10px 0;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: darkgreen;
+  padding: 0 8px;
+}
+
+.menu-items a:not(:last-child)::after {
+  content: "|";
+  padding-left: 8px;
+  color: green;
+}
+
+.menu-items a:hover {
+  cursor: pointer;
+}
+
+
+
+.section {
+  margin: 30px auto;
+  max-width: 700px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+#css-art {
+  background: #87ceeb;
+}
+
+.art {
+  margin: 20px auto;
+}
+
+.moon {
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: -25px 0 0 0 lightsteelblue;
+  margin: auto;
+}
+
+.star {
+  width: 0;
+  height: 0;
+  margin: auto;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid gold;
+  position: relative;
+}
+
+.star::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: -50px;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid gold;
+}
+
+.cloud {
+  width: 150px;
+  height: 80px;
+  background: #f1f1f1;
+  border-radius: 50px;
+  position: relative;
+  margin: auto;
+  box-shadow: 30px 10px #87ceeb;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: lightgrey;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  top: -40px;
+  left: 10px;
+}
+
+.cloud::after {
+  top: -30px;
+  right: 10px;
+}
+
+.bike-img {
+  width: 45px;
+  position: relative;
+}
+
+#bikeContainer {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+.bike {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left 1s linear;
+}
+
+footer {
+  margin-top: 30px;
+  color: black;
+}
+
+/* Media Queries */
+
+@media (min-width: 600px) {
+  .toggle-arrow {
+    display: none;
+  }
+
+  .menu-items {
+    display: block !important;
+  }
+
+  .menu-items a {
+    display: inline-block;
+  }
+}
