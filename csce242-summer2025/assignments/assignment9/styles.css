@@ -1,0 +1,83 @@
+/* body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+h2 {
+  color: #941b1e;
+  margin-bottom: 5px;
+}
+
+h3 {
+  color: #941b1e;
+  margin-top: 0;
+}
+
+.hotdog-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.hotdog-card {
+  position: relative;
+  width: 250px;
+  cursor: pointer;
+  border: 3px solid #941b1e;
+  border-radius: 6px;
+  background-color: #fffaf0;
+}
+
+.hotdog-card img {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(148, 27, 30, 0.85);
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.hotdog-card:hover .overlay {
+  opacity: 1;
+}
+
+.modal-box {
+  background-color: #fbe8b0;
+  padding: 20px;
+  border: 4px solid #941b1e;
+  border-radius: 10px;
+}
+
+.modal-content {
+  text-align: left;
+  padding: 10px 30px;
+  color: #3a3a3a;
+}
+
+footer {
+  margin-top: 30px;
+  color: #941b1e;
+  font-size: 0.9em;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  .hotdog-card {
+    width: 90%;
+  }
+}
