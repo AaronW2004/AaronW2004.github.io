@@ -1,13 +1,13 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f5ec; /* Cream background */
+  background-color: #f9f5ec; 
   text-align: center;
   margin: 0;
   padding: 20px;
 }
 
 h2 {
-  color: #941b1e; /* Crimson */
+  color: #941b1e; 
   margin-bottom: 0;
 }
 
@@ -43,7 +43,7 @@ h3 {
 .overlay {
   position: absolute;
   bottom: 0;
-  background: rgba(148, 27, 30, 0.85); /* crimson with transparency */
+  background: rgba(148, 27, 30, 0.85); 
   color: white;
   width: 100%;
   transition: 0.3s ease;
@@ -96,14 +96,14 @@ h3 {
 }
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f5ec; /* Cream background */
+  background-color: #f9f5ec; 
   text-align: center;
   margin: 0;
   padding: 20px;
 }
 
 h2 {
-  color: #941b1e; /* Crimson */
+  color: #941b1e; 
   margin-bottom: 0;
 }
 

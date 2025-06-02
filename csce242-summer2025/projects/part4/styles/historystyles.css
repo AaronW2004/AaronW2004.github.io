@@ -1,3 +1,4 @@
+/* Reset & Layout */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,70 +6,83 @@
 }
 
 html, body {
-  height: 100%;
+  height: 90vh;
   font-family: Arial, sans-serif;
-}
-
-body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background-image: url("../images/spelmanbackground.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
 }
 
 /* Header */
 header {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 10px 0;
+  text-align: center;
+  flex: 0 0 auto;
+  background-color: #B9D9EB;
+  border-bottom: 1px solid white;
 }
 
 h1 {
-  margin-bottom: 10px;
+  color: #114448;
+  padding: 10px 0;
+  font-size: 1.8rem;
 }
 
-/* Nav */
+/* Navbar */
+.navbar {
+  padding: 0;
+  margin: 0;
+}
+
 .nav-links {
-  list-style: none;
+  border: 1px solid white;
+  list-style-type: none;
   display: flex;
   justify-content: center;
-  gap: 10px;
   flex-wrap: wrap;
-  padding-bottom: 10px;
+  background-color: #114448;
+  margin: 0;
+  padding: 10px 0;
+  gap: 20px;
 }
 
 .nav-links li {
-  background-color: #ccc;
-  padding: 10px 20px;
-  border: 1px solid black;
+  margin: 0;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 15px;
 }
 
-.nav-links a.active {
-  background-color: white;
-  border-bottom: 3px solid black;
+/* Main Section */
+.background {
+  flex: 1 0 auto;
+  background-image: url("../images/spelmanbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Page title */
+/* Title */
 .page-title-box {
+  width: 100%;
   display: flex;
   justify-content: flex-start;
-  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .page-title-box h2 {
-  background-color: white;
+  background-color: #114448;
+  color: white;
   padding: 10px 20px;
-  border: 1px solid black;
-  font-size: 1.5rem;
+  border: 1px solid white;
+  font-size: 1.7rem;
 }
 
 /* Grid layout */
@@ -76,30 +90,35 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  padding: 40px;
+  padding: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 /* Text and Image boxes */
 .text-box {
-  background-color: #ccc;
-  padding: 50px;
-  border-radius: 20px;
+  background-color: #B9D9EB;
+  padding: 30px;
+  border: 1px solid #114448;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   text-align: center;
+  height: 200px;
 }
 
 .image-box {
-  background-color: #ccc;
+  background-color: #B9D9EB;
+  border: 1px solid #114448;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 200px;
+  overflow: hidden;
 }
 
 .image-box img {
@@ -111,20 +130,36 @@ h1 {
 
 /* Footer */
 footer {
-  background-color: #ccc;
+  flex: 0 0 10%;
+  background-color: #114448;
   padding: 15px;
+  color: white;
   border-top: 1px solid black;
-  margin-top: auto;
+  text-align: center;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .history-grid {
     grid-template-columns: 1fr;
+    padding: 10px;
   }
 
   .page-title-box {
     justify-content: center;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .page-title-box h2 {
+    font-size: 1.4rem;
   }
 
   .text-box,
