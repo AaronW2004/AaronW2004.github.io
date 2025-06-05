@@ -18,7 +18,7 @@ form.onsubmit = (event) => {
     const url = "https://api.web3forms.com/submit";
 
     try {
-    const response = await fetch(url, {
+        const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
