@@ -1,4 +1,4 @@
-fetch("../scripts/graduates.json")
+fetch("https://aaronw2004.github.io/csce242-summer2025/projects/part5/scripts/graduates.json")
   .then(response => response.json())
   .then(graduates => {
     const container = document.getElementById("graduate-container");
