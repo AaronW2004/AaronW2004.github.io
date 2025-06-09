@@ -1,0 +1,141 @@
+/* Reset & Layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 105vh;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  flex: 0 0 auto;
+  background-color: #B9D9EB;
+  border-bottom: 1px solid white;
+}
+
+h1 {
+  color: #114448;
+  padding: 10px 0;
+  font-size: 1.8rem;
+}
+
+/* Navbar */
+.navbar {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links {
+  border: 1px solid white;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #114448;
+  margin: 0;
+  padding: 10px 0;
+  gap: 20px; 
+  border-collapse: collapse;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem; 
+  padding: 10px 15px;
+}
+
+.background {
+  flex: 1 0 auto;
+  background-image: url("images/spelmanbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.center-box {
+  background-color: #B9D9EB;
+  padding: 20px 30px;
+  border: 1px solid #114448;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #114448;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  background-color: #114448;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0d3538;
+}
+
+/* Footer */
+footer {
+  flex: 0 0 10%;
+  background-color: #114448;
+  padding: 15px;
+  color: white;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  button {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}

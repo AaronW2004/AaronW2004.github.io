@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  flex: 0 0 auto;
+  background-color: #B9D9EB;
+  border-bottom: 4px solid #114448;
+}
+
+h1 {
+  color: #114448;
+  padding: 10px 0;
+  font-size: 1.8rem;
+}
+
+.navbar {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #114448;
+  padding: 10px 0;
+  gap: 20px;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+}
+
+/* Main Section */
+main {
+  flex: 1;
+  background-image: url("images/spelmanbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-title-box h2 {
+  background-color: #B9D9EB;
+  padding: 10px 20px;
+  border: 1px solid #114448;
+  font-size: 1.7rem;
+  color: #114448;
+}
+
+.event-date-box {
+  background-color: #B9D9EB;
+  color: #114448;
+  padding: 10px 20px;
+  border: 1px solid #114448;
+  font-size: 1.1rem;
+}
+
+.content-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.left-side, .right-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-image-box, .small-image-box {
+  background-color: #B9D9EB;
+  padding: 10px;
+  border: 1px solid #114448;
+}
+
+.main-image-box img, .small-image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main-caption, .small-caption {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #114448;
+  margin-top: 8px;
+}
+
+.event-info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.info-box, .schedule-box {
+  flex: 1;
+  background-color: #B9D9EB;
+  color: #114448;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #114448;
+  font-weight: bold;
+}
+
+.details-box {
+  background-color: #B9D9EB;
+  padding: 20px;
+  border: 1px solid #114448;
+  color: #114448;
+  font-size: 1.05rem;
+}
+
+/* Footer */
+footer {
+  flex: 0 0 auto;
+  background-color: #114448;
+  padding: 15px;
+  color: white;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .content-grid {
+    flex-direction: column;
+  }
+
+  .info-box, .schedule-box {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .details-box {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .page-title-box h2 {
+    font-size: 1.4rem;
+  }
+}

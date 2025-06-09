@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us - Spelman College Graduation Weekend</title>
+  <link rel="stylesheet" href="../styles/contactusstyles.css">
+</head>
+<body>
+  <header>
+    <h1>Spelman College Graduation Weekend</h1>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="classday.html">Class Day</a></li>
+        <li><a href="baccalaureate.html">Baccalaureate</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="background">
+    <div class="title-row">
+      <div class="page-title-box"><h2>Contact Us</h2></div>
+    </div>
+
+    <div class="content-grid">
+      <div class="left-column">
+        <div class="description-box">
+          Our site is managed by members of the Spelman College Communications Team and Graduation Planning Committee. Any questions submitted through this form are directed to staff members who are actively engaged in coordinating Commencement Weekend. Our team is committed to providing timely and informative responses to help you and your loved ones prepare for this momentous occasion.
+        </div>
+        <div class="contact-box">
+          General Questions: info@spelman.edu<br>
+          Phone: (404) 270-5000<br>
+          Office Hours: Mon–Fri, 9am–5pm EST
+        </div>
+        <div class="speaker-box">
+          For guest speaker inquiries or event-specific concerns, please contact Dr. Lisa Monroe at lmonroe@spelman.edu or call the Office of Academic Affairs at (404) 270-5100.
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="image-box">
+          <img src="../images/students.jpg" alt="Contact image">
+          <div class="image-caption">Students gathered during a prior year's celebration weekend</div>
+        </div>
+        <div class="form-box">
+          <form id="contact-form" method="POST" action="https://api.web3forms.com/submit">
+                <input type="hidden" name="access_key" value="766e15ab-403a-4cae-a18d-c044032d3108" />
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name" />
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email" />
+                <label for="question">Ask a Question</label>
+                <textarea id="question" name="message" required placeholder="Type your question here..."></textarea>
+              <button type="submit">Send</button>
+            <div id="form-message"></div>
+          </form>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; aaronnw</p>
+  </footer>
+  <script src="../scripts/contactform.js"></script>
+</body>
+</html>

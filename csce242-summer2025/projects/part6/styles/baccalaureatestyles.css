@@ -1,0 +1,194 @@
+/* Reset & Layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  text-align: center;
+  flex: 0 0 auto;
+  background-color: #B9D9EB;
+  border-bottom: 1px solid white;
+}
+
+h1 {
+  color: #114448;
+  padding: 10px 0;
+  font-size: 1.8rem;
+}
+
+/* Navbar */
+.navbar {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links {
+  border: 1px solid white;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #114448;
+  margin: 0;
+  padding: 10px 0;
+  gap: 20px;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+}
+
+/* Main Section */
+.background {
+  flex: 1 0 auto;
+  background-image: url("../images/spelmanbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title Row */
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.page-title-box h2 {
+  background-color: #114448;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid white;
+  font-size: 1.7rem;
+}
+
+.event-date-box {
+  background-color: #B9D9EB;
+  padding: 8px 16px;
+  border: 1px solid #114448;
+  font-size: 1rem;
+}
+
+/* Content Grid */
+.content-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Left Column */
+.left-column {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.description-box,
+.info-box,
+.schedule-box,
+.speaker-box {
+  background-color: #B9D9EB;
+  padding: 20px;
+  font-weight: bold;
+  border: 1px solid #114448;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Right Column */
+.right-column {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.image-box {
+  background-color: #B9D9EB;
+  border: 1px solid #114448;
+  padding-bottom: 10px;
+  height: 80%;
+  width: 80%;
+  max-width: 550px;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-caption {
+  padding: 10px;
+  font-size: 1rem;
+  color: #114448;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  flex: 0 0 10%;
+  background-color: #114448;
+  padding: 15px;
+  color: white;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+  }
+
+  .description-box,
+  .info-box,
+  .schedule-box,
+  .speaker-box {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .page-title-box h2 {
+    font-size: 1.4rem;
+  }
+}
