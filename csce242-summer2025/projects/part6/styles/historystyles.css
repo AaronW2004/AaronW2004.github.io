@@ -1,4 +1,3 @@
-/* Reset & Layout */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -85,7 +84,6 @@ h1 {
   font-size: 1.7rem;
 }
 
-/* Grid layout */
 .history-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -56,7 +56,6 @@ h1 {
   padding: 10px 15px;
 }
 
-/* Main Background */
 .background {
   flex: 1 0 auto;
   background-image: url("../images/spelmanbackground.jpg");

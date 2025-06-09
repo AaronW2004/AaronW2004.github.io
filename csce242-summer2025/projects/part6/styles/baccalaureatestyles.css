@@ -1,4 +1,3 @@
-/* Reset & Layout */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -56,7 +55,6 @@ h1 {
   padding: 10px 15px;
 }
 
-/* Main Section */
 .background {
   flex: 1 0 auto;
   background-image: url("../images/spelmanbackground.jpg");
@@ -69,7 +67,6 @@ h1 {
   justify-content: center;
 }
 
-/* Title Row */
 .title-row {
   display: flex;
   align-items: center;
@@ -92,7 +89,6 @@ h1 {
   font-size: 1rem;
 }
 
-/* Content Grid */
 .content-grid {
   display: flex;
   justify-content: space-between;
